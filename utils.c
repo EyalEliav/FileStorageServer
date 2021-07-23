@@ -1,5 +1,5 @@
 
-
+#include <stdio.h>
 #include "utils.h"
 
 #define SIZE 200

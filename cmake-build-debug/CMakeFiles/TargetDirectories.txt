@@ -1,3 +1,0 @@
-D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/FileStorageServerC.dir
-D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
