@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FileStorageServerC.dir/Utils/utils.c.obj"
+  "CMakeFiles/FileStorageServerC.dir/client.c.obj"
   "CMakeFiles/FileStorageServerC.dir/main.c.obj"
+  "CMakeFiles/FileStorageServerC.dir/server.c.obj"
+  "CMakeFiles/FileStorageServerC.dir/utils.c.obj"
   "FileStorageServerC.exe"
   "FileStorageServerC.exe.manifest"
   "FileStorageServerC.lib"

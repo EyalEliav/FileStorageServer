@@ -52,10 +52,10 @@ RM = C:\Users\Eyal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\b
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Development\FileStorageServerC
+CMAKE_SOURCE_DIR = D:\Development\FileStorageServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Development\FileStorageServerC\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Development\FileStorageServer\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,9 +84,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,32 +127,32 @@ FileStorageServerC\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\build
 .PHONY : FileStorageServerC\fast
 
-Utils\utils.obj: Utils\utils.c.obj
+client.obj: client.c.obj
 
-.PHONY : Utils\utils.obj
+.PHONY : client.obj
 
 # target to build an object file
-Utils\utils.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj
-.PHONY : Utils\utils.c.obj
+client.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\client.c.obj
+.PHONY : client.c.obj
 
-Utils\utils.i: Utils\utils.c.i
+client.i: client.c.i
 
-.PHONY : Utils\utils.i
+.PHONY : client.i
 
 # target to preprocess a source file
-Utils\utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\Utils\utils.c.i
-.PHONY : Utils\utils.c.i
+client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\client.c.i
+.PHONY : client.c.i
 
-Utils\utils.s: Utils\utils.c.s
+client.s: client.c.s
 
-.PHONY : Utils\utils.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-Utils\utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\Utils\utils.c.s
-.PHONY : Utils\utils.c.s
+client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\client.c.s
+.PHONY : client.c.s
 
 main.obj: main.c.obj
 
@@ -181,6 +181,60 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\main.c.s
 .PHONY : main.c.s
 
+server.obj: server.c.obj
+
+.PHONY : server.obj
+
+# target to build an object file
+server.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\server.c.obj
+.PHONY : server.c.obj
+
+server.i: server.c.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\server.c.i
+.PHONY : server.c.i
+
+server.s: server.c.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\server.c.s
+.PHONY : server.c.s
+
+utils.obj: utils.c.obj
+
+.PHONY : utils.obj
+
+# target to build an object file
+utils.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\utils.c.obj
+.PHONY : utils.c.obj
+
+utils.i: utils.c.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\utils.c.i
+.PHONY : utils.c.i
+
+utils.s: utils.c.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileStorageServerC.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\FileStorageServerC.dir\utils.c.s
+.PHONY : utils.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -190,12 +244,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... FileStorageServerC
-	@echo ... Utils/utils.obj
-	@echo ... Utils/utils.i
-	@echo ... Utils/utils.s
+	@echo ... client.obj
+	@echo ... client.i
+	@echo ... client.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... server.obj
+	@echo ... server.i
+	@echo ... server.s
+	@echo ... utils.obj
+	@echo ... utils.i
+	@echo ... utils.s
 .PHONY : help
 
 

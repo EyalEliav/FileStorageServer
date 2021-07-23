@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/Development/FileStorageServerC/Utils/utils.c" "D:/Development/FileStorageServerC/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/Utils/utils.c.obj"
-  "D:/Development/FileStorageServerC/main.c" "D:/Development/FileStorageServerC/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/main.c.obj"
+  "D:/Development/FileStorageServer/client.c" "D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/client.c.obj"
+  "D:/Development/FileStorageServer/main.c" "D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/main.c.obj"
+  "D:/Development/FileStorageServer/server.c" "D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/server.c.obj"
+  "D:/Development/FileStorageServer/utils.c" "D:/Development/FileStorageServer/cmake-build-debug/CMakeFiles/FileStorageServerC.dir/utils.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

@@ -3,4 +3,4 @@ project(FileStorageServerC C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(FileStorageServerC main.c Utils/utils.c Utils/utils.h)
+add_executable(FileStorageServerC main.c utils.c utils.h server.c client.c)

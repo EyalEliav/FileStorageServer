@@ -47,10 +47,10 @@ RM = C:\Users\Eyal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\b
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Development\FileStorageServerC
+CMAKE_SOURCE_DIR = D:\Development\FileStorageServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Development\FileStorageServerC\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Development\FileStorageServer\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\FileStorageServerC.dir\depend.make
@@ -63,57 +63,99 @@ include CMakeFiles\FileStorageServerC.dir\flags.make
 
 CMakeFiles\FileStorageServerC.dir\main.c.obj: CMakeFiles\FileStorageServerC.dir\flags.make
 CMakeFiles\FileStorageServerC.dir\main.c.obj: ..\main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/FileStorageServerC.dir/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/FileStorageServerC.dir/main.c.obj"
 	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\main.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServerC\main.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\main.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServer\main.c
 <<
 
 CMakeFiles\FileStorageServerC.dir\main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FileStorageServerC.dir/main.c.i"
 	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\FileStorageServerC.dir\main.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServerC\main.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServer\main.c
 <<
 
 CMakeFiles\FileStorageServerC.dir\main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FileStorageServerC.dir/main.c.s"
 	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\main.c.s /c D:\Development\FileStorageServerC\main.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\main.c.s /c D:\Development\FileStorageServer\main.c
 <<
 
-CMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj: CMakeFiles\FileStorageServerC.dir\flags.make
-CMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj: ..\Utils\utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/FileStorageServerC.dir/Utils/utils.c.obj"
+CMakeFiles\FileStorageServerC.dir\utils.c.obj: CMakeFiles\FileStorageServerC.dir\flags.make
+CMakeFiles\FileStorageServerC.dir\utils.c.obj: ..\utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/FileStorageServerC.dir/utils.c.obj"
 	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServerC\Utils\utils.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\utils.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServer\utils.c
 <<
 
-CMakeFiles\FileStorageServerC.dir\Utils\utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FileStorageServerC.dir/Utils/utils.c.i"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\FileStorageServerC.dir\Utils\utils.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServerC\Utils\utils.c
+CMakeFiles\FileStorageServerC.dir\utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FileStorageServerC.dir/utils.c.i"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\FileStorageServerC.dir\utils.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServer\utils.c
 <<
 
-CMakeFiles\FileStorageServerC.dir\Utils\utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FileStorageServerC.dir/Utils/utils.c.s"
+CMakeFiles\FileStorageServerC.dir\utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FileStorageServerC.dir/utils.c.s"
 	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\Utils\utils.c.s /c D:\Development\FileStorageServerC\Utils\utils.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\utils.c.s /c D:\Development\FileStorageServer\utils.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\server.c.obj: CMakeFiles\FileStorageServerC.dir\flags.make
+CMakeFiles\FileStorageServerC.dir\server.c.obj: ..\server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FileStorageServerC.dir/server.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\server.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServer\server.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FileStorageServerC.dir/server.c.i"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\FileStorageServerC.dir\server.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServer\server.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FileStorageServerC.dir/server.c.s"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\server.c.s /c D:\Development\FileStorageServer\server.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\client.c.obj: CMakeFiles\FileStorageServerC.dir\flags.make
+CMakeFiles\FileStorageServerC.dir\client.c.obj: ..\client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/FileStorageServerC.dir/client.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\FileStorageServerC.dir\client.c.obj /FdCMakeFiles\FileStorageServerC.dir\ /FS -c D:\Development\FileStorageServer\client.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FileStorageServerC.dir/client.c.i"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\FileStorageServerC.dir\client.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Development\FileStorageServer\client.c
+<<
+
+CMakeFiles\FileStorageServerC.dir\client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FileStorageServerC.dir/client.c.s"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\FileStorageServerC.dir\client.c.s /c D:\Development\FileStorageServer\client.c
 <<
 
 # Object files for target FileStorageServerC
 FileStorageServerC_OBJECTS = \
 "CMakeFiles\FileStorageServerC.dir\main.c.obj" \
-"CMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj"
+"CMakeFiles\FileStorageServerC.dir\utils.c.obj" \
+"CMakeFiles\FileStorageServerC.dir\server.c.obj" \
+"CMakeFiles\FileStorageServerC.dir\client.c.obj"
 
 # External object files for target FileStorageServerC
 FileStorageServerC_EXTERNAL_OBJECTS =
 
 FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\main.c.obj
-FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\Utils\utils.c.obj
+FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\utils.c.obj
+FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\server.c.obj
+FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\client.c.obj
 FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\build.make
 FileStorageServerC.exe: CMakeFiles\FileStorageServerC.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable FileStorageServerC.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable FileStorageServerC.exe"
 	C:\Users\Eyal\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\FileStorageServerC.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\FileStorageServerC.dir\objects1.rsp @<<
- /out:FileStorageServerC.exe /implib:FileStorageServerC.lib /pdb:D:\Development\FileStorageServerC\cmake-build-debug\FileStorageServerC.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:FileStorageServerC.exe /implib:FileStorageServerC.lib /pdb:D:\Development\FileStorageServer\cmake-build-debug\FileStorageServerC.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -126,6 +168,6 @@ CMakeFiles\FileStorageServerC.dir\clean:
 .PHONY : CMakeFiles\FileStorageServerC.dir\clean
 
 CMakeFiles\FileStorageServerC.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\Development\FileStorageServerC D:\Development\FileStorageServerC D:\Development\FileStorageServerC\cmake-build-debug D:\Development\FileStorageServerC\cmake-build-debug D:\Development\FileStorageServerC\cmake-build-debug\CMakeFiles\FileStorageServerC.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\Development\FileStorageServer D:\Development\FileStorageServer D:\Development\FileStorageServer\cmake-build-debug D:\Development\FileStorageServer\cmake-build-debug D:\Development\FileStorageServer\cmake-build-debug\CMakeFiles\FileStorageServerC.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\FileStorageServerC.dir\depend
 
