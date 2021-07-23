@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "utils.h"
 
 #define SIZE 200
@@ -48,7 +49,7 @@ void write_file(char * username, char * filename, int sockfd){
         perror("Error opening file");
         exit(1);
     }
-    
+
     while (recv(sockfd, buffer, SIZE, 0) > 0) {
         fprintf(fp, "%s", buffer);
         bzero(buffer, SIZE);
