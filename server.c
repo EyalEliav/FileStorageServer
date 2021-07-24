@@ -193,7 +193,6 @@ int main()
         }
 
         for (int i = 0; i < FD_SETSIZE; i++)
-        {
             if (FD_ISSET(i, &ready_sockets))
             {
                 if (i == server_socket)
@@ -202,11 +201,8 @@ int main()
                     FD_SET(client_socket, &current_sockets);
                 }
                 else
-                {
-                    handle_connection(i);  
-                } 
+                    handle_connection(i);
             }
-        }
     }
 
     return 0;
