@@ -60,6 +60,14 @@ void handle_file_download(int sockfd, char * username)
     write_file(username, filename, sockfd);
 }
 
+void send_selection_to_server(int sockfd, int selection)
+{
+    char sel = selection + '0';
+    if (send(sockfd, sel, sizeof(sel), 0) == -1)
+        error_exit("Error sending data to server", 1);
+    return;
+}
+
 void client_menu()
 {
     int answer = 0;
@@ -90,12 +98,15 @@ void client_menu()
         switch (answer)
         {
             case 1:
+                send_selection_to_server(sockfd, 1);
                 handle_file_upload(sockfd, username);
                 break;
             case 2:
+                send_selection_to_server(sockfd, 2);
                 handle_file_download(sockfd, username);
                 break;
             case 3:
+                send_selection_to_server(sockfd, 3);
                 puts("bye bye!");
                 break;
             default:
