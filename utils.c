@@ -5,26 +5,22 @@
 
 #define SIZE 200
 
-void exit_prog(char * error, int exit_code)
-{
-    perror(error);
-    exit(exit_code);
-}
 
-char * create_file_path(char * username, char * filename)
+
+void create_file_path(char * path, char * username, char * filename)
 {
-    char file_path[SIZE] = "";
-    strcat(file_path, username);
-    strcat(file_path, "/");
-    strcat(file_path, filename);
-    return file_path;
+    strcat(path, username);
+    strcat(path, "/");
+    strcat(path, filename);
 }
 
 
 void send_file(char * username, char * filename, int sockfd){
     int n;
-    char data[SIZE] = {0};
-    char * file_path = create_file_path(username, filename);
+    char data[SIZE] = "";
+    char file_path[SIZE] = "";
+    
+    create_file_path(file_path, username, filename);
     FILE * fp = fopen(file_path, "r");
 
     if (fp == NULL)
@@ -47,7 +43,9 @@ void write_file(char * username, char * filename, int sockfd){
     int n;
     FILE *fp;
     char buffer[SIZE];
-    char * file_path = create_file_path(username, filename);
+    char file_path[SIZE] = "";
+
+    create_file_path(file_path, username, filename);
     fp = fopen(file_path, "w");
 
     if (fp == NULL)
@@ -61,4 +59,10 @@ void write_file(char * username, char * filename, int sockfd){
         bzero(buffer, SIZE);
     }
     return;
+}
+
+void error_exit(char * error, int exit_code)
+{
+    perror(error);
+    exit(exit_code);
 }

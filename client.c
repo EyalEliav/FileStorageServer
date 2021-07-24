@@ -26,10 +26,10 @@ void handle_file_upload(int sockfd, char * username)
     gets(filename);
 
     if (send(sockfd, filename, strlen(username), 0) == -1)
-        exit_prog("Error sending data to server", 1);
+        error_exit("Error sending data to server", 1);
 
     if (recv(sockfd, server_answer, 10, 0) <= 0)
-        exit_prog("Error receiving data from server", 1);
+        error_exit("Error receiving data from server", 1);
 
     if (strcmp(server_answer, "bad") == 0)
     {
@@ -47,10 +47,10 @@ void handle_file_download(int sockfd, char * username)
     gets(filename);
 
     if (send(sockfd, filename, strlen(username), 0) == -1)
-        exit_prog("Error sending data to server", 1);
+        error_exit("Error sending data to server", 1);
 
     if (recv(sockfd, server_answer, 10, 0) <= 0)
-        exit_prog("Error receiving data from server", 1);
+        error_exit("Error receiving data from server", 1);
         
     if (strcmp(server_answer, "bad") == 0)
     {
@@ -69,19 +69,19 @@ void client_menu()
     char username[SIZE] = {0};
 
     if(sockfd < 0) 
-        exit_prog("Error in socket", 1);
+        error_exit("Error in socket", 1);
 
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = PORT;
     server_addr.sin_addr.s_addr = inet_addr(IP);
 
     if (connect(sockfd, (struct sockaddr*)&server_addr, sizeof(server_addr)) == -1)
-        exit_prog("Error in connect", 1);
+        error_exit("Error in connect", 1);
 
     puts("please enter username : ");
     gets(username);
     if (send(sockfd, username, strlen(username), 0) == -1)
-        exit_prog("Error sending data to server", 1);
+        error_exit("Error sending data to server", 1);
 
     while (answer != 3)
     {
