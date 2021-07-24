@@ -63,7 +63,7 @@ void handle_file_download(int sockfd, char * username)
 void send_selection_to_server(int sockfd, int selection)
 {
     char sel = selection + '0';
-    if (send(sockfd, sel, sizeof(sel), 0) == -1)
+    if (send(sockfd, &sel, sizeof(sel), 0) == -1)
         error_exit("Error sending data to server", 1);
     return;
 }
