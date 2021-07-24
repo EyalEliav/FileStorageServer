@@ -5,6 +5,12 @@
 
 #define SIZE 200
 
+void exit_prog(char * error, int exit_code)
+{
+    perror(error);
+    exit(exit_code);
+}
+
 char * create_file_path(char * username, char * filename)
 {
     char file_path[SIZE] = "";
