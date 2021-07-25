@@ -15,7 +15,6 @@ void print_menu()
     puts("Menu - enter the number of your desired option :");
     puts("1) upload file");
     puts("2) download file");
-    puts("3) exit");
 }
 
 void handle_file_upload(int sockfd, char * username)
@@ -91,27 +90,20 @@ void client_menu()
     if (send(sockfd, username, strlen(username), 0) == -1)
         error_exit("Error sending data to server", 1);
 
-    while (answer != 3)
+    print_menu();
+    scanf("%d", &answer);
+    switch (answer)
     {
-        print_menu();
-        scanf("%d", &answer);
-        switch (answer)
-        {
-            case 1:
-                send_selection_to_server(sockfd, 1);
-                handle_file_upload(sockfd, username);
-                break;
-            case 2:
-                send_selection_to_server(sockfd, 2);
-                handle_file_download(sockfd, username);
-                break;
-            case 3:
-                send_selection_to_server(sockfd, 3);
-                puts("bye bye!");
-                break;
-            default:
-                puts("wrong input. please try again");
-        }
+        case 1:
+            send_selection_to_server(sockfd, 1);
+            handle_file_upload(sockfd, username);
+            break;
+        case 2:
+            send_selection_to_server(sockfd, 2);
+            handle_file_download(sockfd, username);
+            break;
+        default:
+            puts("wrong input. please try again");
     }
     close(sockfd);
 }

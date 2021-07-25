@@ -27,7 +27,9 @@ int file_exists(char *path)
 void validate_user(int sockfd, char *username)
 {
     DIR *dir = opendir(username);
-    if (ENOENT == errno)
+    if (dir)
+        closedir(dir);
+    else if (ENOENT == errno)
     {
         if (mkdir(username, 0777))
         {
@@ -68,7 +70,6 @@ void handle_file_receiving(int sockfd, char *username)
         close(sockfd);
         return;
     }
-
     write_file(username, filename, sockfd, 1);
     return;
 }
@@ -114,16 +115,14 @@ void handle_connection(int sockfd)
         return;
     }
     validate_user(sockfd, username);
-    while (1)
+    if (recv(sockfd, &selection, sizeof(selection), 0) <= 0)
     {
-        if (recv(sockfd, &selection, sizeof(selection), 0) <= 0)
-        {
-            perror("Error receiving data from client");
-            close(sockfd);
-            return;
-        }
-        switch (selection)
-        {
+        perror("Error receiving data from client");
+        close(sockfd);
+        return;
+    }
+    switch (selection)
+    {
         case '1':
             handle_file_receiving(sockfd, username);
             break;
@@ -131,11 +130,11 @@ void handle_connection(int sockfd)
             handle_file_sending(sockfd, username);
             break;
         default:
-            puts("client ended connection");
+            puts("client sent wrong option");
             close(sockfd);
             return;
-        }
     }
+    close(sockfd);
 }
 
 int main()
@@ -201,7 +200,10 @@ int main()
                     FD_SET(client_socket, &current_sockets);
                 }
                 else
+                {
                     handle_connection(i);
+                    FD_CLR(i, &current_sockets);
+                }
             }
     }
 

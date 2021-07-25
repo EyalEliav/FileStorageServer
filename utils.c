@@ -35,7 +35,7 @@ void send_file(char * username, char * filename, int sockfd, int flag){
 
     while(fgets(data, SIZE, fp) != NULL) {
         if (send(sockfd, data, sizeof(data), 0) == -1) {
-            perror("[-]Error in sending file.");
+            perror("Error in sending file.");
             exit(1);
         }
         bzero(data, SIZE);
@@ -63,6 +63,7 @@ void write_file(char * username, char * filename, int sockfd, int flag){
 
     while (recv(sockfd, buffer, SIZE, 0) > 0) {
         fprintf(fp, "%s", buffer);
+        fflush(fp);
         bzero(buffer, SIZE);
     }
     return;
