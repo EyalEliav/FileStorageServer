@@ -18,8 +18,8 @@ void create_file_path(char * path, char * username, char * filename)
 
 void send_file(char * username, char * filename, int sockfd, int flag){
     int n;
-    char data[SIZE] = "";
-    char file_path[SIZE] = {0};
+    char data[SIZE] = {0};
+    char file_path[SIZE] = "";
 
     if (flag)
         create_file_path(file_path, username, filename);
@@ -46,7 +46,7 @@ void send_file(char * username, char * filename, int sockfd, int flag){
 void write_file(char * username, char * filename, int sockfd, int flag){
     int n;
     FILE *fp;
-    char buffer[SIZE];
+    char buffer[SIZE] = {0};
     char file_path[SIZE] = {0};
 
     if (flag)
@@ -66,6 +66,7 @@ void write_file(char * username, char * filename, int sockfd, int flag){
         fflush(fp);
         bzero(buffer, SIZE);
     }
+    fflush(fp);
     return;
 }
 

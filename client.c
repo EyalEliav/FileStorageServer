@@ -20,14 +20,14 @@ void print_menu()
 void handle_file_upload(int sockfd, char * username)
 {
     char filename[SIZE] = {0};
-    char server_answer[10] = {0};
+    char server_answer[SIZE] = {0};
     puts("please enter the name of the file you want to upload");
     scanf("%s", filename);
 
     if (send(sockfd, filename, SIZE, 0) == -1)
         error_exit("Error sending data to server", 1);
 
-    if (recv(sockfd, server_answer, 10, 0) <= 0)
+    if (recv(sockfd, server_answer, SIZE, 0) <= 0)
         error_exit("Error receiving data from server", 1);
 
     if (strcmp(server_answer, "bad") == 0)

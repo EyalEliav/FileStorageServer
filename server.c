@@ -14,7 +14,7 @@
 int file_exists(char *path)
 {
     FILE *file;
-    file = fopen("path", "r");
+    file = fopen(path, "r");
     if (file)
     {
         fclose(file);
@@ -92,14 +92,13 @@ void handle_file_sending(int sockfd, char *username)
         close(sockfd);
         return;
     }
-    else if (send(sockfd, "good", strlen("good"), 0) == -1)
+    if (send(sockfd, "good", strlen("good"), 0) == -1)
     {
         perror("Error sending response to client");
         close(sockfd);
         return;
     }
-
-    send_file(username, filename, sockfd,0);
+    send_file(username, filename, sockfd,1);
     return;
 }
 

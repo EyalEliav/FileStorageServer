@@ -53,3 +53,4 @@ dkms.conf
 
 # Build and debug configs
 debug/
+.vscode/
