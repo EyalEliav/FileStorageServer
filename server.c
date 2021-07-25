@@ -69,7 +69,7 @@ void handle_file_receiving(int sockfd, char *username)
         return;
     }
 
-    write_file(username, filename, sockfd);
+    write_file(username, filename, sockfd, 1);
     return;
 }
 
@@ -98,7 +98,7 @@ void handle_file_sending(int sockfd, char *username)
         return;
     }
 
-    send_file(username, filename, sockfd);
+    send_file(username, filename, sockfd,0);
     return;
 }
 
@@ -113,7 +113,7 @@ void handle_connection(int sockfd)
         close(sockfd);
         return;
     }
-
+    validate_user(sockfd, username);
     while (1)
     {
         if (recv(sockfd, &selection, sizeof(selection), 0) <= 0)
@@ -156,7 +156,7 @@ int main()
         perror("Error in socket");
         exit(1);
     }
-    printf("[+]Server socket created successfully.\n");
+    printf("Server socket created successfully.\n");
 
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = port;

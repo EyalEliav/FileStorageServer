@@ -23,9 +23,9 @@ void handle_file_upload(int sockfd, char * username)
     char filename[SIZE] = {0};
     char server_answer[10] = {0};
     puts("please enter the name of the file you want to upload");
-    gets(filename);
+    scanf("%s", filename);
 
-    if (send(sockfd, filename, strlen(username), 0) == -1)
+    if (send(sockfd, filename, SIZE, 0) == -1)
         error_exit("Error sending data to server", 1);
 
     if (recv(sockfd, server_answer, 10, 0) <= 0)
@@ -36,7 +36,7 @@ void handle_file_upload(int sockfd, char * username)
         puts("file already exists");
         return;
     }
-    send_file(username, filename, sockfd);
+    send_file(username, filename, sockfd, 0);
 }
 
 void handle_file_download(int sockfd, char * username)
@@ -44,9 +44,9 @@ void handle_file_download(int sockfd, char * username)
     char filename[SIZE] = {0};
     char server_answer[10] = {0};
     puts("please enter the name of the file you want to download");
-    gets(filename);
+    scanf("%s", filename);
 
-    if (send(sockfd, filename, strlen(username), 0) == -1)
+    if (send(sockfd, filename, SIZE, 0) == -1)
         error_exit("Error sending data to server", 1);
 
     if (recv(sockfd, server_answer, 10, 0) <= 0)
@@ -57,7 +57,7 @@ void handle_file_download(int sockfd, char * username)
         puts("file does not exists");
         return;
     }
-    write_file(username, filename, sockfd);
+    write_file(username, filename, sockfd, 0);
 }
 
 void send_selection_to_server(int sockfd, int selection)
@@ -87,7 +87,7 @@ void client_menu()
         error_exit("Error in connect", 1);
 
     puts("please enter username : ");
-    gets(username);
+    scanf("%s", username);
     if (send(sockfd, username, strlen(username), 0) == -1)
         error_exit("Error sending data to server", 1);
 
