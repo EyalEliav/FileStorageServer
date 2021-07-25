@@ -54,3 +54,5 @@ dkms.conf
 # Build and debug configs
 debug/
 .vscode/
+server_folder/
+client_folder/
