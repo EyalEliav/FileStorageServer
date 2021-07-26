@@ -139,8 +139,6 @@ void handle_connection(int sockfd)
 
 int main()
 {
-    int e;
-
     int server_socket;
     fd_set current_sockets, ready_sockets;
     struct sockaddr_in server_addr, new_addr;
@@ -153,26 +151,26 @@ int main()
         perror("Error in socket");
         exit(1);
     }
+    bzero(&server_addr, sizeof(server_addr));
     printf("Server socket created successfully.\n");
 
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(PORT);
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    server_addr.sin_port = htons(PORT);
+   
 
-    e = bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr));
-    if (e < 0)
+    if (bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) != 0)
     {
         perror("Error in bind");
         exit(1);
     }
 
-    if (listen(server_socket, 10) == 0)
-        printf("Listening....\n");
-    else
+    if (listen(server_socket, 10) != 0)
     {
         perror("Error in listening");
         exit(1);
     }
+    printf("Listening....\n");
 
     FD_ZERO(&current_sockets);
     FD_SET(server_socket, &current_sockets);

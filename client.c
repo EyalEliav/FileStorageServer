@@ -7,7 +7,7 @@
 
 #define SIZE 200
 #define IP "127.0.0.1"
-#define PORT 8080;
+#define PORT 8080
 
 
 void print_menu()
@@ -77,13 +77,15 @@ void client_menu()
 
     if(sockfd < 0) 
         error_exit("Error in socket", 1);
+    bzero(&server_addr, sizeof(server_addr));
 
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = PORT;
     server_addr.sin_addr.s_addr = inet_addr(IP);
+    server_addr.sin_port = htons(PORT);
 
-    if (connect(sockfd, (struct sockaddr*)&server_addr, sizeof(server_addr)) == -1)
+    if (connect(sockfd, (struct sockaddr*)&server_addr, sizeof(server_addr)) != 0)
         error_exit("Error in connect", 1);
+    puts("Connected to server!");
 
     puts("please enter username : ");
     scanf("%s", username);
