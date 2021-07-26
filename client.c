@@ -12,7 +12,7 @@
 int file_exists(char *filename)
 {
     FILE *file;
-    file = fopen(path, "r");
+    file = fopen(filename, "r");
     if (file)
     {
         fclose(file);
