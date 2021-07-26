@@ -10,6 +10,7 @@
 #include <sys/stat.h>
 
 #define SIZE 200
+#define PORT 8080
 
 int file_exists(char *path)
 {
@@ -138,8 +139,6 @@ void handle_connection(int sockfd)
 
 int main()
 {
-    char *ip = "127.0.0.1";
-    int port = 8080;
     int e;
 
     int server_socket;
@@ -157,7 +156,7 @@ int main()
     printf("Server socket created successfully.\n");
 
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(port);
+    server_addr.sin_port = htons(PORT);
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     e = bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr));
