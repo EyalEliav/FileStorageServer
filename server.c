@@ -157,8 +157,8 @@ int main()
     printf("Server socket created successfully.\n");
 
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = port;
-    server_addr.sin_addr.s_addr = inet_addr(ip);
+    server_addr.sin_port = htons(port);
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     e = bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr));
     if (e < 0)
