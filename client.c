@@ -9,6 +9,18 @@
 #define IP "127.0.0.1"
 #define PORT 8080
 
+int file_exists(char *filename)
+{
+    FILE *file;
+    file = fopen(path, "r");
+    if (file)
+    {
+        fclose(file);
+        return 1;
+    }
+    else
+        return 0;
+}
 
 void print_menu()
 {
@@ -23,6 +35,11 @@ void handle_file_upload(int sockfd, char * username)
     char server_answer[SIZE] = {0};
     puts("please enter the name of the file you want to upload");
     scanf("%s", filename);
+    while (!file_exists(filename))
+    {
+        puts("File does not exists! please enter another file name");
+        scanf("%s", filename);
+    }
 
     if (send(sockfd, filename, SIZE, 0) == -1)
         error_exit("Error sending data to server", 1);
